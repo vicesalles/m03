@@ -1,0 +1,110 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Cuenta {
+
+	private int numeroCuenta;
+	private int saldo;
+	private String titular;
+	
+	public static void main(String[] args) {
+		
+		Cuenta uno = new Cuenta(1,4000,"Bob Bobson");
+		Cuenta dos = new Cuenta(2,200,"Bob Bobson");
+		
+	}
+	
+	public Cuenta (int numeroCuenta, int saldo, String titular){
+	
+		this.numeroCuenta = numeroCuenta;
+		this.saldo = saldo;
+		this.titular = titular;
+		
+	}
+	
+	public int getNumeroCuenta(){
+		return numeroCuenta;
+	}
+	
+	public int getSaldo(){
+		return saldo;
+	}
+
+	public String getTitular(){
+		return titular;
+	}
+	
+	public void setSaldo(int nuevoSaldo){
+		saldo += nuevoSaldo;
+		System.out.println("Se ha efectuado el ingreso correctamente.");
+		System.out.println("Tu saldo actual es de "+saldo+"€");
+	}
+	
+	public void setTitular(String nuevoTitular){
+		titular = nuevoTitular;
+	}
+	
+	public void cobrarComision (int comision){
+		saldo -= comision;
+	}
+	
+	public void menu (){
+	
+		Scanner scaner = new Scanner(System.in);
+		int eleccion = scaner.nextInt();
+		
+		System.out.println("€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€");
+		System.out.println("€ Bienvenido a Gansterlandia, tu banco de confianza €");
+		System.out.println("€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€");
+		System.out.println("Selecciona una opción:");
+		System.out.println("1.Consultar Saldo");
+		System.out.println("2.Ingresar dinero");
+		System.out.println("3.Sacar dinero");
+		System.out.println("4.Transferencia");
+		
+		switch (eleccion) {
+        case 1:
+           getSaldo();
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        default:
+            // The user input an unexpected choice.
+        	System.out.println("Opción no disponible");
+    }
+	
+	}
+	
+	public int seleccionaCuenta(){
+		
+		int respuesta= 0;
+		Scanner scaner = new Scanner(System.in);
+		int eleccion = scaner.nextInt();
+		System.out.println("_______________________");
+		System.out.println("Selecciona una cuenta");
+		System.out.println("1.Cuenta uno");
+		System.out.println("2.Cuenta dos");
+		
+		if(eleccion == 1 || eleccion == 2){
+			
+			respuesta = eleccion-1;
+			
+		}else{
+			
+			seleccionaCuenta();
+			
+		}
+		
+		return respuesta;
+		
+	}
+	
+}

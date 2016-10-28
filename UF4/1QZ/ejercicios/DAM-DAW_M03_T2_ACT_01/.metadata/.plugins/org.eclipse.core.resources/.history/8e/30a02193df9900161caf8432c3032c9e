@@ -1,0 +1,22 @@
+package Ejercicio3;
+
+public class Alumno {
+
+	private String nombre;
+	private String apellido;
+	private int edad;
+	private int[] notas;
+
+	public static void main(String[] args) {
+		
+	}
+	
+	//Constructor
+	public Alumno (String nombre, String apellido, int edad, int[]notas){
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.edad = edad;
+		this.notas = notas;
+	}
+	
+}

@@ -1,0 +1,11 @@
+import Ejercicio1.Planeta;
+import Ejercicio1.Sistema;
+
+public class Dios {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

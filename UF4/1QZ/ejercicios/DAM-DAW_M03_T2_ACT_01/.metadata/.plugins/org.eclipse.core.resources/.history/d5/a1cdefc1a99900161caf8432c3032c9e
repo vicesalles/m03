@@ -1,0 +1,11 @@
+package Ejercicio2;
+import Ejercicio2.Cuenta;
+
+public class Cajero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

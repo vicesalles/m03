@@ -1,0 +1,11 @@
+import Sistema;
+import Planeta;
+
+public class Dios {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
