@@ -1,0 +1,12 @@
+package actividad2;
+
+import javax.swing.JTextField;
+
+public class Formulario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JTextField nombre = new JTextField("Nombre");
+	}
+
+}

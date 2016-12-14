@@ -1,0 +1,11 @@
+package Actividad1;
+
+public interface Imicro {
+
+	static double modificadorBus (int plazas){
+		int precio = plazas *2;
+		double respuesta = (double) precio;		
+		return respuesta;
+	}
+	
+}

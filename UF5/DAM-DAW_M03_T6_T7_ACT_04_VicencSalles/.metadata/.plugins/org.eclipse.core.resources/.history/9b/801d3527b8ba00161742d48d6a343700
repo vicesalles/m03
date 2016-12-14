@@ -1,0 +1,31 @@
+package actividad3;
+
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+public class Logueado extends JDialog {
+	
+	private String nombre;	
+
+	public Logueado(String nombre) {
+		
+		this.nombre = nombre;
+		
+		
+		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		setResizable(false);
+		getContentPane().setLayout(null);
+		
+		JLabel lblMensaje = new JLabel("Hola "+nombre+"!");
+		lblMensaje.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMensaje.setBounds(53, 61, 279, 20);
+		getContentPane().add(lblMensaje);
+		
+		setSize(400,200);
+		setVisible(true);
+		setModal(true);
+	}
+	
+
+}

@@ -1,0 +1,29 @@
+package Actividad1;
+
+public abstract class Vehiculo {
+
+	String matricula = this.matricula;
+	static int precioBaseDia = 50;
+	
+	abstract void dummy();
+	
+	static int alquilerBase(int nDias, int tarifa){
+		
+		int precio = nDias*tarifa;
+		
+		return precio;	
+		
+		
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	
+	
+	
+}

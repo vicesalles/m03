@@ -1,0 +1,31 @@
+package Actividad1;
+
+public abstract class Vehiculo {
+
+	String matricula = this.matricula;
+	static int precioBaseDia = 50;
+	String tipo = this.tipo;
+	
+	abstract void dummy();
+	
+	static int getTarifaBase(int nDias, int tarifa){
+		
+		int precio = nDias*tarifa;
+		
+		return precio;	
+		
+		
+	}
+
+	public String getMatricula() {
+		System.out.println("La matricula de este vehiculo es "+ matricula);
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	
+	
+	
+}

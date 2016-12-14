@@ -1,0 +1,19 @@
+package Ejercicio3;
+
+import java.util.ArrayList;
+
+public class Registro {
+
+	static ArrayList<Alumno> trabajos = new ArrayList<Alumno>();
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public Registro (){
+		
+	}
+	
+
+}

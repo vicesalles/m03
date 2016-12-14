@@ -1,0 +1,20 @@
+package Actividad1;
+
+public class Camion extends VehiculoCarga {
+
+	double extraBase = 40;
+	
+	public Camion(String matricula, int pma, String modelo) {
+		super(matricula, pma, modelo);
+		// Constructor heredado de VehiculoCarga
+	}
+
+	@Override
+	public double getTarifa(int dias) {
+		// Añado los 40 euros extra que valen los camiones
+		return super.getTarifa(dias)+extraBase;
+	}
+	
+	
+
+}

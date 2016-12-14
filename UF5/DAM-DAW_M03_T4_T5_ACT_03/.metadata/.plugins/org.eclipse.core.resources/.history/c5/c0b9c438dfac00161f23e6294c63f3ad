@@ -1,0 +1,20 @@
+package Ejercicio2;
+
+public abstract class Trabajo {
+
+	int Identificador;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public Trabajo (int identificador){
+		
+		this.identificador = identificador;
+		
+	}
+	
+	
+
+}

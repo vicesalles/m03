@@ -1,0 +1,51 @@
+package Ejercicio3;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ApartadoUno {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public static int pideInt(String frase){
+		
+		String input="";
+		int res=0;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println(frase);
+		try {
+			input = br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+						
+			
+		while (!esInteger(input)){
+			
+			System.out.println("Debes introducir un intenger");
+			pideInt(frase);			
+		}
+		
+		res = Integer.parseInt(input);
+		return res;
+	}
+	
+	//Para detectar si un string contiene un intenger
+	public static boolean esInteger(String txt) {
+	    try { 
+	        Integer.parseInt(txt); 
+	    } catch(NumberFormatException e) { 
+	        return false; 
+	    } catch(NullPointerException e) {
+	        return false;
+	    }
+	    return true;
+	}
+	
+}

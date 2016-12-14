@@ -1,0 +1,24 @@
+package Actividad1;
+
+//Baso el camión en mi Clase 'VehiculoCarga' porqué el cálculo de la tarifa se le asemeja
+
+public class Camion extends VehiculoCarga {
+	//De hecho, esta es la única diferencia entre Camion y VehiculoCarga:
+	double extraBase = 40;
+	
+	public Camion(String matricula, int pma, String modelo) {
+		super(matricula, pma, modelo);
+		// Constructor heredado de VehiculoCarga
+	}
+
+	@Override
+	public double getTarifa(int dias) {
+		// Añado los 40 euros extra que valen los camiones al método heredado
+		double presupuesto = super.getTarifa(dias)+extraBase;
+		System.out.println("El precio total será de "+presupuesto+" euros");
+		return super.getTarifa(dias)+extraBase;
+	}
+	
+	
+
+}

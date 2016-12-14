@@ -1,0 +1,14 @@
+package Actividad1;
+
+public class Camion extends VehiculoCarga {
+
+	int extraBase = 40;
+	
+	public Camion(String matricula, int pma, String modelo) {
+		super(matricula, pma, modelo);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

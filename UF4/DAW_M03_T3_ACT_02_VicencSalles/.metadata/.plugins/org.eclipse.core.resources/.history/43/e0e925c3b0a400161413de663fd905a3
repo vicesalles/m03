@@ -1,0 +1,22 @@
+package Actividad1;
+
+public class VehiculoCarga extends Vehiculo {
+
+	int pma = this.pma;
+	
+	public VehiculoCarga (String matricula, int pma, String modelo){
+		
+		this.matricula = matricula;
+		this.pma = pma;
+		this.modelo = modelo;
+		
+	}
+	
+	
+	@Override
+	void dummy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

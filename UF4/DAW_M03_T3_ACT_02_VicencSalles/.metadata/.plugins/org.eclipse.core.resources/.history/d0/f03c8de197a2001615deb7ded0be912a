@@ -1,0 +1,13 @@
+package Actividad1;
+
+public class programa {
+
+	public static void main(String[] args) {
+		
+		System.out.println("################################################");
+		System.out.println("# ULTIMATE : Software de alquiler de vehiculos #");
+		System.out.println("################################################");
+		
+	}
+
+}

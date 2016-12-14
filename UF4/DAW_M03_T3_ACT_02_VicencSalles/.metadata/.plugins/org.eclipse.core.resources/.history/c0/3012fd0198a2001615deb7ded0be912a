@@ -1,0 +1,30 @@
+package Actividad1;
+
+public class programa {
+
+	public static void main(String[] args) {
+		
+		Coche forfi = new Coche ("44586H",4,"Ford Fiesta");
+		
+		Vehiculo[] parque = {forfi,};
+		
+		System.out.println("################################################");
+		System.out.println("# ULTIMATE : Software de alquiler de vehiculos #");
+		System.out.println("################################################");
+		System.out.println("");
+		System.out.println();
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = null;
+		//Variable para almacenar el double
+		int respuesta= 0;
+		try {
+			input = br.readLine();
+		} catch (IOException e) {			
+			e.printStackTrace();			
+		}
+		
+		
+	}
+
+}

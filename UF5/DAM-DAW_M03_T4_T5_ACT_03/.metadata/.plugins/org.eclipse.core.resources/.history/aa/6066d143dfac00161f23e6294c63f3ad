@@ -1,0 +1,16 @@
+package Ejercicio2;
+
+public abstract class Trabajo {
+
+	int Identificador;
+		
+	
+	public Trabajo (int identificador){
+		
+		this.identificador = identificador;
+		
+	}
+	
+	
+
+}

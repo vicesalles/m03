@@ -1,0 +1,376 @@
+!SESSION 2016-11-30 17:02:35.303 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ca_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.562
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-contrib.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.563
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-javadoc.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.564
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-junit.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.565
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-sources.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.566
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.566
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\lib.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.668
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-contrib.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.670
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-javadoc.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.671
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-junit.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.672
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-sources.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.673
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-11-30 17:02:39.673
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\lib.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-11-30 17:03:54.118
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\vscu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ui 2 19 2016-11-30 17:04:18.305
+!MESSAGE Updating the index from remote failed. Version: 1.0.1.v20150913-0716
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ui.v2.AeriServer.downloadDatabase(AeriServer.java:148)
+	at org.eclipse.epp.internal.logging.aeri.ui.log.ProblemsDatabaseUpdateJob.run(ProblemsDatabaseUpdateJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-12-01 07:06:36.112
+!MESSAGE Cannot download published Gradle versions.
+!STACK 0
+java.net.UnknownHostException: services.gradle.org
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.downloadVersionInformation(PublishedGradleVersions.java:167)
+	at com.gradleware.tooling.toolingutils.distribution.PublishedGradleVersions.create(PublishedGradleVersions.java:134)
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.create(PublishedGradleVersionsWrapper.java:40)
+	at org.eclipse.buildship.core.util.gradle.PublishedGradleVersionsWrapper.<init>(PublishedGradleVersionsWrapper.java:35)
+	at org.eclipse.buildship.core.CorePlugin.createPublishedGradleVersions(CorePlugin.java:166)
+	at org.eclipse.buildship.core.CorePlugin.registerServices(CorePlugin.java:139)
+	at org.eclipse.buildship.core.CorePlugin.start(CorePlugin.java:102)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source)
+	at java.lang.Class.getConstructor0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.console.ConsolePageParticipantExtension.createDelegate(ConsolePageParticipantExtension.java:72)
+	at org.eclipse.ui.internal.console.ConsoleManager.getPageParticipants(ConsoleManager.java:455)
+	at org.eclipse.ui.internal.console.ConsoleView.doCreatePage(ConsoleView.java:317)
+	at org.eclipse.ui.part.PageBookView.createPage(PageBookView.java:422)
+	at org.eclipse.ui.part.PageBookView.partActivated(PageBookView.java:768)
+	at org.eclipse.ui.internal.console.ConsoleView$4.run(ConsoleView.java:398)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.recommenders.rcp 2 15 2016-12-01 09:30:02.255
+!MESSAGE Failed to parse news feed
+!STACK 0
+java.net.UnknownHostException: www.codetrails.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:102)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.getRSSFeed(CheckForProjectNewsJob.java:138)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.doRun(CheckForProjectNewsJob.java:89)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.run(CheckForProjectNewsJob.java:62)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2016-12-02 08:49:51.752 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ca_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-12-02 08:50:16.089
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-12-02 08:50:25.775
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\vscu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2016-12-02 10:49:51.306
+!MESSAGE Server returned lastModified <= 0 for https://raw.github.com/guari/eclipse-ui-theme/master/com.github.eclipseuitheme.themes.updatesite/content.jar
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:50:20.920
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-contrib.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:50:21.036
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-javadoc.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:50:21.059
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-junit.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:50:21.059
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-sources.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:50:21.074
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:50:21.074
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\lib.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2016-12-02 10:50:28.892
+!MESSAGE Server returned lastModified <= 0 for https://raw.github.com/guari/eclipse-ui-theme/master/com.github.eclipseuitheme.themes.updatesite/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.touchpoint.natives 2 0 2016-12-02 10:52:43.115
+!MESSAGE Could not remove temporary backup directory (it is safe to manually delete it and its contents): C:\Users\vscu\AppData\Local\Temp\epp.package.java_2b17de67f7a0_9e6dee16d643
+!SESSION 2016-12-02 10:56:58.836 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ca_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/C:/Users/vscu/Documents/estudiar/DAW/exercicis/m03/UF5/DAM-DAW_M03_T6_T7_ACT_04_VicencSalles/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.344
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-contrib.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.345
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-javadoc.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.347
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-junit.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.348
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-sources.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.349
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.349
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\lib.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.459
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-contrib.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.460
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-javadoc.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.461
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-junit.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.462
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-sources.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.463
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.464
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\lib.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.573
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-contrib.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.574
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-javadoc.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.575
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-junit.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.576
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-sources.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.577
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.578
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\lib.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.694
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-contrib.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.695
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-javadoc.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.697
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-junit.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.698
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6-sources.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.699
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\jdom-2.0.6.jar.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-12-02 10:57:06.700
+!MESSAGE Unable to acquire PluginConverter service during generation for: C:\eclipse\plugins\lib.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-12-02 10:57:16.995
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\vscu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-12-05 07:46:24.170 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ca_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-12-05 07:46:36.472
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\vscu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-12-05 08:10:31.676 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ca_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-12-05 08:10:41.755
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\vscu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

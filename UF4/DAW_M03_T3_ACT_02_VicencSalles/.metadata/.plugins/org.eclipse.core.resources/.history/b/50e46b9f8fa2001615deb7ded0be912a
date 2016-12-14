@@ -1,0 +1,18 @@
+package Actividad1;
+
+public class Coche extends Vehiculo {
+
+	int plazas = this.plazas;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	void dummy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

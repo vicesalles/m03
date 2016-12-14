@@ -1,0 +1,27 @@
+package Actividad1;
+
+public class MicroBus extends Coche implements TarifaMicro {
+	
+	double plazaDia = 1.5;
+
+	public MicroBus(String matricula, int plazas, String modelo) {
+		super(matricula, plazas, modelo);		
+	}
+
+	@Override
+	public double getTarifa(int dias) {
+		// TODO Auto-generated method stub
+		double presupuesto = 0.0;
+		double base = getTarifaBase(dias);
+		double plazasD = (double)this.plazas;
+		double diasD = (double)dias;
+		double plusPlazas =  (plazasD * plazaDia)* diasD;
+		presupuesto = base + plusPlazas + TarifaMicro.getBaseBus(this.plazas);
+		System.out.println("El precio total será de "+presupuesto+" euros");
+		return presupuesto;
+	}
+
+	
+	
+	
+}

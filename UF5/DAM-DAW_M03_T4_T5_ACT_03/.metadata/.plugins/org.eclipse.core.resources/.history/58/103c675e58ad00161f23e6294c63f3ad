@@ -1,0 +1,188 @@
+package Ejercicio2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class Programa {
+
+	ArrayList<Trabajo> trabajos = new ArrayList<Trabajo>();
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void menu(){
+		
+		String res = null;
+		int opt = 0;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("#####Bienvenido al Taller Carros2000######");
+		System.out.println("Selecciona una operación a realizar:");
+		System.out.println("1.Registrar Trabajo.");
+		System.out.println("2.Aumentar Horas de un Trabajo.");
+		System.out.println("3.Aumentar Coste de las Piezas");
+		System.out.println("4.Finalizar Trabajo");
+		System.out.println("5.Muestra Trabajo");
+		
+		try {
+			res = br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("Vaya, parece que ha fallado algo.");
+			menu();
+		}
+		
+		opt = Integer.parseInt(res);
+		
+		switch(opt){
+		
+		case 1:
+			registrar();
+		break;
+		
+		case 2:
+			
+		break;
+		
+		default:
+			System.out.println("Esta opción no está disponible.");
+			menu();
+			break;
+		
+		
+		
+		
+		}
+		
+	}
+	
+	
+	//Registrar un trabajo
+	
+	public void registrar(){
+		
+		int id = trabajos.size();
+		String tipo = tipoTrabajo();
+		String descripcion = descripcion();
+		
+		if (tipo =="mecanica"){
+		
+		RepMec a = new RepMec(id,descripcion);
+		trabajos.add(a);
+		
+		}else if(tipo =="chapa"){
+			
+		RepChapa a = new RepChapa(id,descripcion);
+		trabajos.add(a);
+		
+		}else{
+		
+		Revision a = new Revision(id,descripcion);	
+		trabajos.add(a);
+		
+		}
+				
+		System.out.println("----------------------------------------");
+		System.out.println("El trabajo se ha registrado correctamente.");
+		System.out.println("#########################################");
+		menu();
+	}
+	
+	
+	//Seleccionar tipo de trabajo
+	public String tipoTrabajo(){
+		
+		String res = null;
+		String input = null;
+				
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("------------------------------------------------");
+		System.out.println("Selecciona el tipo de trabajo:");
+		System.out.println("1.Reparación mecánica.");
+		System.out.println("2.Reparación chapa y pintura.");
+		System.out.println("3.Revisión.");
+		
+		try {
+			input = br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();			
+		}
+		
+		if(input=="1"){
+			res = "mecanica";
+		}else if(input =="2"){
+			res ="chapa";
+		}else if(input =="3"){
+			res ="revision";
+		}else{
+			System.out.println("Debes introducir un número entre 1 y 3.");
+			tipoTrabajo();
+		}
+		
+		return res;
+	}
+	
+	//Introduce la descripción de un trabajo
+public String descripcion(){
+		
+		String input = null;
+				
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("------------------------------------------------");
+		System.out.println("Introduce la descripción del trabajo a realizar:");		
+		
+		try {
+			input = br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();			
+		}
+		return input;
+}
+
+
+//Seleccionar trabajo a editar
+	public int triaTrabajo(){
+		
+		String input = null;
+		int output = 0;
+		int res = 0;
+		int mValido = trabajos.size()-1;
+		
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("------------------------------------------------");
+		System.out.println("Introduce el identificador del Trabajo:");
+		try {
+			
+			input = br.readLine();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();			
+		}
+		
+		output = Integer.parseInt(input);
+		
+		if (output>mValido){
+			
+			System.out.println("No hay ningún trabajo con este identificador.");
+			triaTrabajo();
+			
+		}else{
+			
+			res = output;
+			
+		}	
+				
+		return res;
+	}
+	
+}

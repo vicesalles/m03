@@ -1,0 +1,33 @@
+package Actividad1;
+
+public class Coche extends Vehiculo {
+
+	int plazas = this.plazas;
+	double plazaDia = 1.5;
+	
+	public Coche (String matricula, int plazas, String tipo){
+		
+		this.matricula = matricula;
+		this.plazas = plazas;
+		this.tipo = tipo;
+		
+	}	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	//Getters y Setters
+	
+	
+	
+	
+	
+	@Override
+	void dummy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

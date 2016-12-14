@@ -1,0 +1,126 @@
+package Actividad1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class programa {
+
+	public static void main(String[] args) {
+				
+		//Agrupo todo el programa dentro de una sola función para poder reiniciarlo cómodamente una vez finalizado
+		miPrograma();
+		
+	}
+	
+	public static void miPrograma(){
+		
+		Coche forfi = new Coche ("44586H",4,"Ford Fiesta");
+		MicroBus cargo = new MicroBus ("34567J",8,"Fiat Cargo");
+		VehiculoCarga bmw = new VehiculoCarga ("44135H",45,"Bmw Gordo");
+		Camion iveco = new Camion("33456J",200,"Iveco Naco");
+		
+		Vehiculo[] parque = {forfi,cargo,bmw,iveco};
+		
+		int seleccion = 0;
+		seleccion = menuInicial();
+		while(seleccion<1 || seleccion>4){
+			System.out.println("-!!- Introduce un número entre 1 y 4 -!!-");
+			seleccion = menuInicial();
+		}
+		int dias = pideDias();
+		int selDef = seleccion-1;
+		parque[selDef].getTarifa(dias);
+		
+		System.out.println("");
+		reiniciar();
+	}
+	
+	
+	//Función que dispara el menu principal
+	public static int menuInicial(){
+		
+		System.out.println("################################################");
+		System.out.println("# ULTIMATE : Software de alquiler de vehiculos #");
+		System.out.println("################################################");
+		System.out.println("");
+		System.out.println("Selecciona un vehiculo de nuestra flota");
+		System.out.println("1. Ford Fiesta (44586H)");
+		System.out.println("2. Fiat Cargo (34567J)");
+		System.out.println("3. BMW Gordo (44135H)");
+		System.out.println("4. Iveco Naco (33456J)");
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = null;
+		//Variable para almacenar el double
+		int respuesta= 0;
+		try {
+			input = br.readLine();
+		} catch (IOException e) {			
+			e.printStackTrace();			
+		}
+		
+		respuesta = Integer.parseInt(input);
+		
+		return respuesta;
+		
+	}
+	
+	//Esta función pide cuantos días de alquiler quieren
+	public static int pideDias(){
+		int r = 0;
+		System.out.println("Durante cuantos días quieres alquilar el vehiculo?");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = null;
+		
+		try {
+			input = br.readLine();
+		} catch (IOException e) {			
+			e.printStackTrace();			
+		}
+		
+			
+		r = Integer.parseInt(input);
+	
+		if (r==0){
+			System.out.println("No puedes alquilar un coche 0 días...");
+			pideDias();
+		}		
+		
+		return r;
+		
+	}
+	
+	//Le pido al usuario si quiere hacer más presupuestos.
+	public static void reiniciar(){
+		
+		System.out.println("Quieres realizar otro presupuesto? (S/N)");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = null;
+		
+		try {
+			input = br.readLine();
+		} catch (IOException e) {			
+			e.printStackTrace();			
+		}
+		
+		input = input.toLowerCase();
+		System.out.println(input);
+		
+		if(input!="s"&&input!="n"){
+			
+			System.out.println("Debes introducir S o N");
+			reiniciar();
+			
+		}else if(input=="s"){
+			
+			miPrograma();
+			
+		}else{
+			System.out.println("Muchas gracias por utilizar nuestro servicio");
+			System.exit(0);
+		}
+		
+	}
+
+}
