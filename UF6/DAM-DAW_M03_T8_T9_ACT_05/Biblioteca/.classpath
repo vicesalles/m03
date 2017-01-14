@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/vscu/Documents/estudiar/DAW/exercicis/m03/UF6/DAM-DAW_M03_T8_T9_ACT_05/Biblioteca/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/vscu/Documents/estudiar/DAW/exercicis/m03/UF6/DAM-DAW_M03_T8_T9_ACT_05/Biblioteca/db4o-8.0.184.15484-all-java5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

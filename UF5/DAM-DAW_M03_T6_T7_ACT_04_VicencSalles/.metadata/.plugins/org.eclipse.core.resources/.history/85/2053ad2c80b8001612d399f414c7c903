@@ -1,7 +1,0 @@
-package actividad2;
-
-import javax.swing.JDialog;
-
-public class MensajeOK extends JDialog {
-
-}

@@ -1,0 +1,17 @@
+package ejercicio2;
+
+public class Libro {
+
+	private String titulo;
+	private String autor;
+	private String isbn;
+	private int numero_paginas;
+	private String genero;
+	
+	
+
+	
+	
+	
+	
+}

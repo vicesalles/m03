@@ -1,0 +1,40 @@
+package ejercicio3;
+
+public class Grupo {
+	private int idGrupo;
+	private String nombre;
+	private String estilo;
+	private int anyo;
+	public Grupo(int idGrupo, String nombre, String estilo, int anyo) {
+		super();
+		this.idGrupo = idGrupo;
+		this.nombre = nombre;
+		this.estilo = estilo;
+		this.anyo = anyo;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getEstilo() {
+		return estilo;
+	}
+	public void setEstilo(String estilo) {
+		this.estilo = estilo;
+	}
+	public int getAnyo() {
+		return anyo;
+	}
+	public void setAnyo(int anyo) {
+		this.anyo = anyo;
+	}
+	public int getIdGrupo() {
+		return idGrupo;
+	}
+	
+	
+	
+	
+}

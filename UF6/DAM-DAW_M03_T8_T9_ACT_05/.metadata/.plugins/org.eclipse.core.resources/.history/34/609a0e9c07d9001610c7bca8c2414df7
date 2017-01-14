@@ -1,0 +1,19 @@
+
+public class Libro {
+
+	private int isbn;
+	private String titulo;
+	private String autor;
+	private int nPaginas;
+	private String genero;
+	
+	public Libro(int isbn, String titulo, String autor, int nPaginas, String genero) {
+		super();
+		this.isbn = isbn;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.nPaginas = nPaginas;
+		this.genero = genero;
+	}
+	
+}

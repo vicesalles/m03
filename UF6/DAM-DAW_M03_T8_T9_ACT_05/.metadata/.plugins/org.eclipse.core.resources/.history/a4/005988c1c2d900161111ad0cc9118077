@@ -1,0 +1,24 @@
+package ejercicio2;
+
+public class Libro {
+
+	private String titulo;
+	private String autor;
+	private String isbn;
+	private int numero_paginas;
+	private String genero;
+	
+	public Libro(int id_libro, String titulo, String autor, String isbn, int numero_paginas, String genero) {
+		super();
+		this.isbn = isbn;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.numero_paginas = numero_paginas;
+		this.genero = genero;
+	}
+
+	
+	
+	
+	
+}

@@ -1,0 +1,234 @@
+package ejercicio2;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class GestionBDD {
+
+	// Dirección de mi base de datos
+	private static String datosConexion = "jdbc:mysql://127.0.0.1:3306/";
+
+	// Mi Base de datos
+	private static String baseDatos = "libreria";
+
+	// Usuario
+	private static String usuario = "root";
+
+	// Password
+	private static String password = "";
+
+	// Conexión
+	private Connection con;
+
+	public GestionBDD() {
+		try {
+			con = DriverManager.getConnection(datosConexion + baseDatos, usuario, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	// LIBROS
+
+	public void insertarLibro(String isbn, String titulo, String autor, String numero_paginas, String genero)
+			throws SQLException {
+		String[] n;
+		n = autor.split("-");
+		String query = "INSERT INTO libro(isbn,titulo,autor,numero_paginas,genero)values('" + isbn + "','" + titulo
+				+ "'," + n[0] + "," + numero_paginas + ",'" + genero + "')";
+
+		Statement stm = null;
+
+		try {
+			stm = con.createStatement();
+			stm.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			stm.close();
+		}
+	}
+
+	// Este método borra el libro que le pasemos
+	public void borrarLibro(String id_libro) throws SQLException {
+		String query = "DELETE FROM libro WHERE isbn=" + id_libro;
+
+		Statement stm = null;
+
+		try {
+			stm = con.createStatement();
+			stm.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			stm.close();
+		}
+	}
+
+	// Este método nos permite modificar un libro
+	public void modificarLibro(String id_libro, String isbn, String titulo, String autor, String numero_paginas,
+			String genero) throws SQLException {
+
+		String query = "UPDATE libro SET titulo='" + titulo + "', isbn='" + isbn + "', autor='" + autor
+				+ "', numero_paginas=" + numero_paginas + ", genero='" + genero + "' WHERE id_libro=" + id_libro;
+
+		Statement stm = null;
+
+		try {
+			stm = con.createStatement();
+			stm.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			stm.close();
+		}
+
+	}
+
+	public ArrayList<Libro> cargarLibros() throws SQLException {
+		String query = "select * from libro";
+		Statement stmt = null;
+		ResultSet rs = null;
+		ArrayList<Libro> libros = new ArrayList<Libro>();
+		Libro l;
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(query);
+			while (rs.next()) {
+				l = new Libro(rs.getInt("id_libro"), rs.getString("titulo"), rs.getInt("autor"),
+						rs.getString("isbn"), rs.getInt("numero_paginas"), rs.getString("genero"));
+				libros.add(l);
+			}
+			return libros;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			rs.close();
+			stmt.close();
+		}
+		return null;
+	}
+	
+	//Aqui checkeo si un autor tiene libros
+	
+	public boolean checkLibros(int idAutor){
+		boolean r = false;
+		
+		
+		return r;
+		
+	}
+
+	// AUTORES
+	
+	
+	public String getAutor(int id_autor) throws SQLException{
+		
+		Statement stmt = null;
+		ResultSet rs = null;
+		String respuesta="";
+		String query = "SELECT * FROM autor WHERE id_autor="+id_autor;
+		
+			try {
+				stmt = con.createStatement();
+				rs = stmt.executeQuery(query);
+				if(rs.next()){			
+				respuesta = rs.getString("nombre")+" "+rs.getString("apellidos");
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				stmt.close();
+			}
+				
+				
+		
+		return respuesta;
+	}
+
+	public void insertarAutor(String nombre, String apellidos) throws SQLException {
+
+		String query = "INSERT INTO autor(nombre,apellidos)values('" + nombre + "','" + apellidos + "')";
+
+		Statement stm = null;
+
+		try {
+			stm = con.createStatement();
+			stm.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			stm.close();
+		}
+	}
+	
+	public void modificarAutor(String id_autor, String nombre, String apellidos) throws SQLException {
+
+		String query = "UPDATE autor SET nombre='" + nombre + "', apellidos='" + apellidos + "' WHERE id_autor=" + id_autor;
+
+		Statement stm = null;
+
+		try {
+			stm = con.createStatement();
+			stm.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			stm.close();
+		}
+
+	}
+	
+	public void eliminarAutor(String id_autor) throws SQLException {
+		String query = "DELETE FROM autor WHERE id_autor=" + id_autor;
+
+		Statement stm = null;
+
+		try {
+			stm = con.createStatement();
+			stm.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			stm.close();
+		}
+	}
+	
+	public ArrayList<Autor> cargarAutores() throws SQLException {
+		String query = "select * from autor";
+		Statement stmt = null;
+		ResultSet rs = null;
+		ArrayList<Autor> autores = new ArrayList<Autor>();
+		Autor a;
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(query);
+			while (rs.next()) {
+				a = new Autor(rs.getInt("id_autor"), rs.getString("nombre"), rs.getString("apellidos"));
+				autores.add(a);
+			}
+			return autores;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			rs.close();
+			stmt.close();
+		}
+		return null;
+	}
+
+}

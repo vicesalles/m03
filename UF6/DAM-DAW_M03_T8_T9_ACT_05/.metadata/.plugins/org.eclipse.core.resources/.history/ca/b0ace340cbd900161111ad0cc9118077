@@ -1,0 +1,81 @@
+package ejercicio2;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+
+//PASSO A 18:00 de clase 9
+
+public class VistaAutores extends JFrame {
+	public VistaAutores() {
+		getContentPane().setLayout(null);
+		
+		JButton btnInsertar = new JButton("Insertar");
+		btnInsertar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new InsertarAutor();
+				dispose();
+			}
+		});		
+		
+		btnInsertar.setBounds(155, 52, 115, 29);
+		getContentPane().add(btnInsertar);
+		
+		JButton btnModificar = new JButton("Modificar");
+		btnModificar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					new VistaModificar();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				dispose();
+			}
+		});
+		
+		btnModificar.setBounds(155, 97, 115, 29);
+		getContentPane().add(btnModificar);
+		
+		JButton btnEliminar = new JButton("Eliminar");
+		btnEliminar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+					try {
+						new VistaEliminar();
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				dispose();
+			}
+		});
+		
+		btnEliminar.setBounds(155, 143, 115, 29);
+		getContentPane().add(btnEliminar);
+		
+		JButton btnMostrar = new JButton("Mostrar");
+		btnMostrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					new VistaLibro();					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				dispose();
+			}
+		});
+		
+		btnMostrar.setBounds(155, 188, 115, 29);
+		getContentPane().add(btnMostrar);
+		
+		JLabel lblAutores = new JLabel("Autores");
+		lblAutores.setBounds(186, 16, 69, 20);
+		getContentPane().add(lblAutores);
+		
+		setSize(450,300);
+		setVisible(true);
+	}
+}

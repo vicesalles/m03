@@ -1,5 +1,0 @@
-package Ejercicio2;
-
-public interface mecanica {
-	double multiplicador = 1.1;
-}

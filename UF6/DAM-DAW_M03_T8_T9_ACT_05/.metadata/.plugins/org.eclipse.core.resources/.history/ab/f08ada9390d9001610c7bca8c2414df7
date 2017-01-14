@@ -1,0 +1,157 @@
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.BorderLayout;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+
+public class VistaLibro extends JFrame{
+	
+	private ArrayList<Libro> biblioteca;
+	private int i = 0;
+	private JTextField isbnBox;
+	private JTextField tituloBox;
+	private JTextField autorBox;
+	private JTextField nPaginasBox;
+	private JTextField generoBox;
+	private JButton btnAnterior;
+	private JButton btnSiguiente;
+
+	public VistaLibro() throws SQLException{
+		
+		//Passo a 5:20 classe 9
+		
+		biblioteca = Principal.baseDatos.cargarLibros();
+		
+		getContentPane().setLayout(null);
+		
+		//Botones 
+		
+		btnAnterior = new JButton("Anterior");
+		btnAnterior.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				i--;
+				actualizar();
+			}
+		});
+		btnAnterior.setBounds(0, 215, 213, 29);
+		getContentPane().add(btnAnterior);
+		
+		//Habilitamos/deshabilitamos el botón en función de la posición del índice i
+		if(i==0){
+			
+			btnAnterior.setEnabled(false);
+			
+		}else{
+			
+			btnAnterior.setEnabled(true);
+		}
+		
+		btnSiguiente = new JButton("Siguiente");
+		btnSiguiente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				i++;
+				actualizar();
+			}
+		});
+		btnSiguiente.setBounds(210, 215, 218, 29);
+		getContentPane().add(btnSiguiente);
+		//Habilitamos/deshabilitamos el botón en función de la posición del índice i
+		if(i>=biblioteca.size()){
+			
+			btnSiguiente.setEnabled(false);
+			
+		}else{
+			
+			btnSiguiente.setEnabled(true);
+		}
+		
+		//Cajas de Texto
+		
+		isbnBox = new JTextField();
+		isbnBox.setBounds(57, 16, 146, 26);
+		getContentPane().add(isbnBox);
+		isbnBox.setColumns(10);
+		isbnBox.setText(""+biblioteca.get(i).getIsbn());
+		
+		tituloBox = new JTextField();
+		tituloBox.setBounds(57, 52, 325, 26);
+		getContentPane().add(tituloBox);
+		tituloBox.setColumns(10);
+		tituloBox.setText(biblioteca.get(i).getTitulo());
+					
+		autorBox = new JTextField();
+		autorBox.setBounds(57, 91, 146, 26);
+		getContentPane().add(autorBox);
+		autorBox.setColumns(10);
+		autorBox.setText(biblioteca.get(i).getAutor());
+		
+		nPaginasBox = new JTextField();
+		nPaginasBox.setBounds(282, 91, 100, 26);
+		getContentPane().add(nPaginasBox);
+		nPaginasBox.setColumns(10);
+		nPaginasBox.setText(""+biblioteca.get(i).getnPaginas());
+		
+		generoBox = new JTextField();
+		generoBox.setBounds(67, 133, 146, 26);
+		getContentPane().add(generoBox);
+		generoBox.setColumns(10);
+		generoBox.setText(biblioteca.get(i).getGenero());
+		
+	//Labels
+		
+		JLabel tituloLab = new JLabel("Título");
+		tituloLab.setBounds(15, 55, 69, 20);
+		getContentPane().add(tituloLab);
+			
+		JLabel lblIsbn = new JLabel("Isbn");
+		lblIsbn.setBounds(15, 19, 69, 20);
+		getContentPane().add(lblIsbn);
+		
+		JLabel lblAutor = new JLabel("Autor");
+		lblAutor.setBounds(15, 94, 69, 20);
+		getContentPane().add(lblAutor);
+
+		JLabel lblPginas = new JLabel("P\u00E1ginas");
+		lblPginas.setBounds(218, 94, 69, 20);
+		getContentPane().add(lblPginas);
+		
+		JLabel lblGnero = new JLabel("G\u00E9nero");
+		lblGnero.setBounds(15, 136, 69, 20);
+		getContentPane().add(lblGnero);
+		
+		setSize(450, 300);
+		setVisible(true);
+		
+	}
+	
+	public void actualizar(){
+		
+		isbnBox.setText(""+biblioteca.get(i).getIsbn());
+		tituloBox.setText(biblioteca.get(i).getTitulo());
+		autorBox.setText(biblioteca.get(i).getAutor());
+		nPaginasBox.setText(""+biblioteca.get(i).getnPaginas());
+		generoBox.setText(biblioteca.get(i).getGenero());
+		
+		if(i==0){
+			
+			btnAnterior.setEnabled(false);
+			
+		}else{			
+			btnAnterior.setEnabled(true);
+		}
+		if(i>biblioteca.size()){
+			
+			btnSiguiente.setEnabled(false);
+			
+		}else{
+			
+			btnSiguiente.setEnabled(true);
+		}
+		
+	}
+	
+}

@@ -1,0 +1,84 @@
+package ejercicio3;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import com.db4o.Db4oEmbedded;
+import com.db4o.ObjectContainer;
+
+public class Main {
+		
+	static ObjectContainer bd;
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+	
+		bd = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "grupo.db4o");
+		int o;
+		do{
+			o = menu();
+			switch(o){
+			case 1:
+				CrearGrupo();				
+				break;
+			case 2:
+				MostrarGrupos();
+				break;
+			case 3:
+				MostrarEstilo();
+				break;
+			case 4:
+				MostrarTres();
+				break;		
+			case 0:
+				bd.close();
+				System.exit(0);
+				break;
+			}
+		}while(o!=0);
+	
+	}
+	
+	//Menu principal
+	
+	private static int menu() throws NumberFormatException, IOException{
+		
+		int r = 0;
+		
+		System.out.println("[1] Crear Grupo");
+		System.out.println("[2] Mostrar Grupos");
+		System.out.println("[3] Ordenar por estilo");
+		System.out.println("[4] Grupos con más de 3 miembros");		
+		System.out.println("[0] Salir");
+		
+		r = Integer.parseInt(pideTexto("Elige una opción:"));
+		
+		if(r>4){
+			
+			System.out.println("Opción no disponible, vuelve a intentarlo");
+			
+			return menu();
+		
+		}else{
+		
+		return r;
+		
+		}
+	}
+	
+	//Método para pedir Inputs al usuario
+	
+	private static String pideTexto(String pregunta) throws IOException{
+		
+		String r = "";
+		
+		System.out.println(pregunta);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		r = br.readLine();
+		
+		return r;
+	}
+	
+	//Métodos del menú
+	
+}
